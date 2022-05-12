@@ -21,10 +21,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fek-Mt-zgR">
                                 <rect key="frame" x="40" y="604.5" width="138" height="37.5"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Booking">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="97O-Mz-vcp" kind="show" id="iYr-Jt-T7i"/>
@@ -33,10 +34,11 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3K-Lv-8dT">
                                 <rect key="frame" x="236" y="604" width="138" height="38"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="View Booking">
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="tnT-A6-aLi" kind="show" id="WWi-9G-qVg"/>
