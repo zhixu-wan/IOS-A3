@@ -18,6 +18,8 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var Book: UIButton!
     
+    @IBOutlet weak var locationIcon: UIImageView!
+    @IBOutlet weak var location: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

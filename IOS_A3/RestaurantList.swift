@@ -18,7 +18,10 @@ class RestaurantList: UIViewController, UITableViewDelegate, UITableViewDataSour
                 ("Sydney’s best fine diner and a world-class culinary experience in every respect.")]
     let imagesF = [UIImage(named: "pizzahut"),
                    UIImage(named: "thebest"),]
+    let imagesLocationIcon = [UIImage(named: "locationIcon"), UIImage(named: "locationIcon")]
     
+    let location = [("5 Kings Street zetland"),
+                ("28 Ray Street mascot")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +41,8 @@ class RestaurantList: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.pizzaHubCell.image = self.imagesF[indexPath.row]
         cell.pizzaHubTitle.text = self.titlesF[indexPath.row]
         cell.pizzaHubText1.text = self.desF[indexPath.row]
+        cell.locationIcon.image = self.imagesLocationIcon[indexPath.row]
+        cell.location.text = self.location[indexPath.row]
         return cell
     }
 }
