@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7141FEB7282D07C000F5E3C5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7141FEB6282D07C000F5E3C5 /* TableViewCell.swift */; };
 		71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9B282CFF370007B659 /* AppDelegate.swift */; };
 		71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9D282CFF370007B659 /* SceneDelegate.swift */; };
 		71D26BA0282CFF370007B659 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9F282CFF370007B659 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7141FEB6282D07C000F5E3C5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		71D26B98282CFF360007B659 /* IOS_A3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_A3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D26B9B282CFF370007B659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D26B9D282CFF370007B659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				71D26B9D282CFF370007B659 /* SceneDelegate.swift */,
 				71D26B9F282CFF370007B659 /* ViewController.swift */,
 				71D26BA1282CFF370007B659 /* Main.storyboard */,
+				7141FEB6282D07C000F5E3C5 /* TableViewCell.swift */,
 				71D26BA7282CFF3A0007B659 /* Assets.xcassets */,
 				71D26BA9282CFF3A0007B659 /* LaunchScreen.storyboard */,
 				71D26BAC282CFF3A0007B659 /* Info.plist */,
@@ -146,6 +149,7 @@
 				A5BD70C6282D035000EA5211 /* RestaurantList.swift in Sources */,
 				71D26BA0282CFF370007B659 /* ViewController.swift in Sources */,
 				71D26BA6282CFF370007B659 /* IOS_A3.xcdatamodeld in Sources */,
+				7141FEB7282D07C000F5E3C5 /* TableViewCell.swift in Sources */,
 				71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */,
 				71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */,
 			);

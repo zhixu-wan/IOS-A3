@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6LP-uY-g9C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="97O-Mz-vcp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,11 +37,11 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="374" id="2eF-mU-m6P">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="374"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="418" id="2eF-mU-m6P" customClass="TableViewCell" customModule="IOS_A3" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="418"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2eF-mU-m6P" id="x8u-17-aab">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="374"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="418"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tJQ-Va-JnD">
@@ -51,22 +51,67 @@
                                                         <constraint firstAttribute="width" constant="414" id="fUt-kC-8Tm"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pizza Hut" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-aQ-GUR">
-                                                    <rect key="frame" x="186" y="254" width="73" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4d-aQ-GUR">
+                                                    <rect key="frame" x="143" y="254" width="129" height="34"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="24" name="ChalkboardSE-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJg-zS-uAu">
+                                                    <rect key="frame" x="0.0" y="296" width="414" height="78"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="label">
+                                                            <attributes>
+                                                                <color key="NSColor" systemColor="systemRedColor"/>
+                                                                <font key="NSFont" size="11" name="MarkerFelt-Wide"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlR-VU-pYj">
+                                                    <rect key="frame" x="157" y="375" width="70" height="43"/>
+                                                    <color key="backgroundColor" name="AccentColor"/>
+                                                    <state key="normal" title="Book Now">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="a4d-aQ-GUR" firstAttribute="top" secondItem="x8u-17-aab" secondAttribute="topMargin" constant="243" id="3V2-XN-zZB"/>
+                                                <constraint firstAttribute="trailing" secondItem="fJg-zS-uAu" secondAttribute="trailing" id="5VJ-I6-Egi"/>
+                                                <constraint firstItem="a4d-aQ-GUR" firstAttribute="leading" secondItem="x8u-17-aab" secondAttribute="leadingMargin" constant="123" id="CEX-hP-8np"/>
+                                                <constraint firstItem="TlR-VU-pYj" firstAttribute="leading" secondItem="x8u-17-aab" secondAttribute="leading" constant="157" id="Hgg-lw-svo"/>
                                                 <constraint firstItem="tJQ-Va-JnD" firstAttribute="leading" secondItem="x8u-17-aab" secondAttribute="leading" id="KQf-6b-3vf"/>
+                                                <constraint firstAttribute="bottom" secondItem="fJg-zS-uAu" secondAttribute="bottom" id="RAR-pI-jDo"/>
                                                 <constraint firstItem="tJQ-Va-JnD" firstAttribute="top" secondItem="x8u-17-aab" secondAttribute="top" id="SLG-00-7fe"/>
-                                                <constraint firstAttribute="bottom" secondItem="tJQ-Va-JnD" secondAttribute="bottom" constant="119" id="u3w-lG-o0T"/>
+                                                <constraint firstItem="fJg-zS-uAu" firstAttribute="top" secondItem="a4d-aQ-GUR" secondAttribute="bottom" constant="8" id="Y5G-H4-5ZU"/>
+                                                <constraint firstItem="TlR-VU-pYj" firstAttribute="top" secondItem="tJQ-Va-JnD" secondAttribute="bottom" constant="120" id="bjY-2d-tQS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TlR-VU-pYj" secondAttribute="trailing" constant="167" id="btI-xQ-qfT"/>
+                                                <constraint firstAttribute="trailing" secondItem="TlR-VU-pYj" secondAttribute="trailing" constant="187" id="cgx-Ma-gFf"/>
+                                                <constraint firstAttribute="bottom" secondItem="TlR-VU-pYj" secondAttribute="bottom" id="ged-hs-Wo9"/>
+                                                <constraint firstItem="fJg-zS-uAu" firstAttribute="leading" secondItem="x8u-17-aab" secondAttribute="leading" id="qbx-9t-HoJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="a4d-aQ-GUR" secondAttribute="trailing" constant="122" id="yGn-Yh-0ay"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="Book" destination="TlR-VU-pYj" id="V5u-fL-inH"/>
+                                            <outlet property="pizzaHubCell" destination="tJQ-Va-JnD" id="Zq2-Ot-eZm"/>
+                                            <outlet property="pizzaHubText1" destination="fJg-zS-uAu" id="XXs-UX-Fbz"/>
+                                            <outlet property="pizzaHubTitle" destination="a4d-aQ-GUR" id="5B4-q2-PeP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="97O-Mz-vcp" id="3Ln-wF-hFX"/>
+                                    <outlet property="delegate" destination="97O-Mz-vcp" id="PJa-YG-8pm"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bmh-lH-90f"/>
@@ -78,6 +123,9 @@
                             <constraint firstItem="Y0b-5Q-OWW" firstAttribute="top" secondItem="Bmh-lH-90f" secondAttribute="top" id="lOf-w1-KnA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="RestaurantTableView" destination="Y0b-5Q-OWW" id="z4X-HT-xgF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufO-VS-9xn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,8 +151,14 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
