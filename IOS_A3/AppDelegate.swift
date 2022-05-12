@@ -93,6 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         transfer.setValue(num, forKey: "num")
         transfer.setValue(status, forKey: "status")
         transfer.setValue(date, forKey: "date")
+        transfer.setValue(time, forKey: "time")
         
         saveContext()
     }
