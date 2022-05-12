@@ -20,11 +20,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fek-Mt-zgR">
                                 <rect key="frame" x="40" y="604.5" width="138" height="37.5"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Booking">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                    </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
@@ -34,11 +32,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3K-Lv-8dT">
                                 <rect key="frame" x="236" y="604" width="138" height="38"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="View Booking">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                    </backgroundConfiguration>
                                     <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
@@ -268,7 +264,6 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="z60-pk-cYU" secondAttribute="trailing" constant="115" id="Lqp-jL-MbI"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3Lw-OD-oEp" secondAttribute="trailing" constant="160" id="TkK-ts-bZk"/>
                                                 <constraint firstItem="vud-aG-5tE" firstAttribute="top" secondItem="JaT-X9-ZT0" secondAttribute="topMargin" constant="50" id="Yvx-EC-4sN"/>
-                                                <constraint firstItem="vud-aG-5tE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Lw-OD-oEp" secondAttribute="trailing" constant="8" symbolic="YES" id="Z8u-9m-nAJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="vud-aG-5tE" secondAttribute="trailing" constant="20" id="h8O-Pe-VLA"/>
                                                 <constraint firstItem="3Lw-OD-oEp" firstAttribute="top" secondItem="z60-pk-cYU" secondAttribute="bottom" constant="30" id="iAR-3l-GBD"/>
                                                 <constraint firstItem="3Lw-OD-oEp" firstAttribute="top" secondItem="vud-aG-5tE" secondAttribute="top" id="oen-iS-15q"/>
