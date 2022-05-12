@@ -14,6 +14,7 @@
 		71D26BA6282CFF370007B659 /* IOS_A3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71D26BA4282CFF370007B659 /* IOS_A3.xcdatamodeld */; };
 		71D26BA8282CFF3A0007B659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D26BA7282CFF3A0007B659 /* Assets.xcassets */; };
 		71D26BAB282CFF3A0007B659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D26BA9282CFF3A0007B659 /* LaunchScreen.storyboard */; };
+		A5BD70C6282D035000EA5211 /* RestaurantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD70C5282D035000EA5211 /* RestaurantList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		71D26BA7282CFF3A0007B659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71D26BAA282CFF3A0007B659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71D26BAC282CFF3A0007B659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5BD70C5282D035000EA5211 /* RestaurantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				71D26BA9282CFF3A0007B659 /* LaunchScreen.storyboard */,
 				71D26BAC282CFF3A0007B659 /* Info.plist */,
 				71D26BA4282CFF370007B659 /* IOS_A3.xcdatamodeld */,
+				A5BD70C5282D035000EA5211 /* RestaurantList.swift */,
 			);
 			path = IOS_A3;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BD70C6282D035000EA5211 /* RestaurantList.swift in Sources */,
 				71D26BA0282CFF370007B659 /* ViewController.swift in Sources */,
 				71D26BA6282CFF370007B659 /* IOS_A3.xcdatamodeld in Sources */,
 				71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */,
