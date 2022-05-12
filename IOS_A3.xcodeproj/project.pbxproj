@@ -17,6 +17,7 @@
 		71D26BAB282CFF3A0007B659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D26BA9282CFF3A0007B659 /* LaunchScreen.storyboard */; };
 		A5BD70C6282D035000EA5211 /* RestaurantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD70C5282D035000EA5211 /* RestaurantList.swift */; };
 		A5BD70C8282D04F200EA5211 /* MyBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD70C7282D04F200EA5211 /* MyBooking.swift */; };
+		A5BD70D4282D55F900EA5211 /* MyBookingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BD70D3282D55F900EA5211 /* MyBookingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		71D26BAC282CFF3A0007B659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5BD70C5282D035000EA5211 /* RestaurantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantList.swift; sourceTree = "<group>"; };
 		A5BD70C7282D04F200EA5211 /* MyBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooking.swift; sourceTree = "<group>"; };
+		A5BD70D3282D55F900EA5211 /* MyBookingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				71D26BA4282CFF370007B659 /* IOS_A3.xcdatamodeld */,
 				A5BD70C5282D035000EA5211 /* RestaurantList.swift */,
 				A5BD70C7282D04F200EA5211 /* MyBooking.swift */,
+				A5BD70D3282D55F900EA5211 /* MyBookingCell.swift */,
 			);
 			path = IOS_A3;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				71D26BA0282CFF370007B659 /* ViewController.swift in Sources */,
 				71D26BA6282CFF370007B659 /* IOS_A3.xcdatamodeld in Sources */,
 				7141FEB7282D07C000F5E3C5 /* TableViewCell.swift in Sources */,
+				A5BD70D4282D55F900EA5211 /* MyBookingCell.swift in Sources */,
 				71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */,
 				71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */,
 			);

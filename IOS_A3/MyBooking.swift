@@ -13,10 +13,7 @@ class MyBooking: UIViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    
     @IBOutlet weak var myTableView: UITableView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +29,7 @@ extension MyBooking: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = myTableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = myTableView.dequeueReusableCell(withIdentifier: "myBookingCell")
         return cell!
     }
     

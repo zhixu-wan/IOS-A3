@@ -206,7 +206,7 @@
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Xkm-aq-LH2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myBookingCell" id="Xkm-aq-LH2" customClass="MyBookingCell" customModule="IOS_A3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xkm-aq-LH2" id="JaT-X9-ZT0">
@@ -256,6 +256,9 @@
                                                     <rect key="frame" x="325.5" y="61" width="68.5" height="31"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                                    <connections>
+                                                        <action selector="cancel:" destination="Xkm-aq-LH2" eventType="touchUpInside" id="EO1-2a-qDl"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -269,6 +272,13 @@
                                                 <constraint firstItem="3Lw-OD-oEp" firstAttribute="top" secondItem="vud-aG-5tE" secondAttribute="top" id="oen-iS-15q"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="Y9T-dP-cAK" id="cp7-61-GW6"/>
+                                            <outlet property="idLabel" destination="QiT-wf-ySS" id="oaA-Jg-KWN"/>
+                                            <outlet property="nameLabel" destination="IW8-He-KeS" id="rfz-om-3rT"/>
+                                            <outlet property="numLabel" destination="rii-59-vWV" id="gx2-g9-UfA"/>
+                                            <outlet property="timeLabel" destination="ro0-pY-tlw" id="YUS-6R-xLl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
