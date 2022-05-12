@@ -141,5 +141,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("There was an error")
         }
     }
+    
+    func storeRestaurant(name: String, numTable: Int, numRoom: Int) {
+        let context = getContext()
+        let restaurant = NSEntityDescription.entity(forEntityName: "Restaurant", in: context)
+        let transfer = NSManagedObject(entity: restaurant!, insertInto: context)
+        
+        transfer.setValue(name, forKey: "name")
+        transfer.setValue(numTable, forKey: "numTable")
+        transfer.setValue(numRoom, forKey: "numRoom")
+        
+        saveContext()
+    }
 }
 
