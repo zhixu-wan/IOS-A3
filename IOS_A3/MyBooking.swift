@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 class MyBooking: UIViewController {
-
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -29,8 +27,9 @@ extension MyBooking: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = myTableView.dequeueReusableCell(withIdentifier: "myBookingCell")
-        return cell!
+        let cell = myTableView.dequeueReusableCell(withIdentifier: "myBookingCell") as! MyBookingCell
+        
+        return cell
     }
     
     
