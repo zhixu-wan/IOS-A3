@@ -268,6 +268,7 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="z60-pk-cYU" secondAttribute="trailing" constant="115" id="Lqp-jL-MbI"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="3Lw-OD-oEp" secondAttribute="trailing" constant="160" id="TkK-ts-bZk"/>
                                                 <constraint firstItem="vud-aG-5tE" firstAttribute="top" secondItem="JaT-X9-ZT0" secondAttribute="topMargin" constant="50" id="Yvx-EC-4sN"/>
+                                                <constraint firstItem="vud-aG-5tE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Lw-OD-oEp" secondAttribute="trailing" constant="8" symbolic="YES" id="Z8u-9m-nAJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="vud-aG-5tE" secondAttribute="trailing" constant="20" id="h8O-Pe-VLA"/>
                                                 <constraint firstItem="3Lw-OD-oEp" firstAttribute="top" secondItem="z60-pk-cYU" secondAttribute="bottom" constant="30" id="iAR-3l-GBD"/>
                                                 <constraint firstItem="3Lw-OD-oEp" firstAttribute="top" secondItem="vud-aG-5tE" secondAttribute="top" id="oen-iS-15q"/>
@@ -298,6 +299,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Zq-Jb-n0n"/>
+                    <connections>
+                        <outlet property="myTableView" destination="0rP-Zn-18T" id="Pbt-Am-KIS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2s-ge-22p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
