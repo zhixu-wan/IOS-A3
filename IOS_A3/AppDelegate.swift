@@ -97,7 +97,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         saveContext()
     }
     
+    func searchCustomer(id: Int) -> Customer {
+        var customer : Customer!
+        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Customer")
+        let predicate = NSPredicate(format: "id = \(id)")
+        fetchReq.predicate = predicate
+        do {
+            let searchResult = try getContext().fetch(fetchReq)
+            for trans in searchResult as [NSManagedObject] {
+                customer = trans as? Customer
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+        return customer
+    }
     
+    func allCustomers() -> [Customer] {
+        var customers = [Customer]()
+        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Customer")
+        do {
+            let searchResult = try getContext().fetch(fetchReq)
+            for trans in searchResult as [NSManagedObject] {
+                let customer = trans as! Customer
+                customers.append(customer)
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+        return customers
+    }
     
+    func deleteCustomer(id: Int) {
+        let context = getContext()
+        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Customer")
+        let predicate = NSPredicate(format: "id = \(id)")
+        fetchReq.predicate = predicate
+        let deleteReq = NSBatchDeleteRequest(fetchRequest: fetchReq)
+        do {
+            try context.execute(deleteReq)
+            try context.save()
+        } catch {
+            print("There was an error")
+        }
+    }
 }
 
