@@ -76,6 +76,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    func getContext() -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    func storeCustomer(id: Int, name: String, phone: String, num: Int, status: String, date: Date) {
+        let context = getContext()
+        let customer = NSEntityDescription.entity(forEntityName: "Customer", in: context)
+        let transfer = NSManagedObject(entity: customer!, insertInto: context)
+        
+        transfer.setValue(id, forKey: "id")
+        transfer.setValue(name, forKey: "name")
+        transfer.setValue(phone, forKey: "phone")
+        transfer.setValue(num, forKey: "num")
+        transfer.setValue(status, forKey: "status")
+        transfer.setValue(date, forKey: "date")
+        
+        saveContext()
+    }
+    
+    
+    
 }
 

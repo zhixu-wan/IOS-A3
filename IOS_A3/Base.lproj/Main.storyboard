@@ -129,7 +129,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufO-VS-9xn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791.304347826087" y="93.75"/>
+            <point key="canvasLocation" x="1925" y="94"/>
+        </scene>
+        <!--My Booking-->
+        <scene sceneID="dQR-eT-NcA">
+            <objects>
+                <viewController id="tnT-A6-aLi" customClass="MyBooking" customModule="IOS_A3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fQi-YT-pcI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-Zn-18T">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Xkm-aq-LH2">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xkm-aq-LH2" id="JaT-X9-ZT0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tnT-A6-aLi" id="iMo-4r-uL8"/>
+                                    <outlet property="delegate" destination="tnT-A6-aLi" id="tFy-ON-0dq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cbb-hy-Pci"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0rP-Zn-18T" firstAttribute="leading" secondItem="cbb-hy-Pci" secondAttribute="leading" id="WBh-Mu-k3h"/>
+                            <constraint firstItem="cbb-hy-Pci" firstAttribute="bottom" secondItem="0rP-Zn-18T" secondAttribute="bottom" id="Xax-ZH-2ES"/>
+                            <constraint firstItem="cbb-hy-Pci" firstAttribute="trailing" secondItem="0rP-Zn-18T" secondAttribute="trailing" id="Z28-zn-yir"/>
+                            <constraint firstItem="0rP-Zn-18T" firstAttribute="top" secondItem="cbb-hy-Pci" secondAttribute="top" id="mEu-EM-30A"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2s-ge-22p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1425" y="841"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4lB-iN-0jZ">
