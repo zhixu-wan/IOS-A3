@@ -82,7 +82,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="tnT-A6-aLi" kind="show" id="aQO-61-SLF"/>
+                                                        <segue destination="1S3-Fr-dBG" kind="show" id="TZ8-0L-hun"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -139,11 +139,11 @@
             <objects>
                 <viewController id="tnT-A6-aLi" customClass="MyBooking" customModule="IOS_A3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQi-YT-pcI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0rP-Zn-18T">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Xkm-aq-LH2">
@@ -175,6 +175,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2s-ge-22p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1425" y="841"/>
+        </scene>
+        <!--Booking-->
+        <scene sceneID="OyG-SH-xmV">
+            <objects>
+                <viewController title="Booking" id="1S3-Fr-dBG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C1a-kp-4ma">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JZ8-Vp-HNC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7oi-LU-Ws1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJS-dY-NDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2707" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4lB-iN-0jZ">
