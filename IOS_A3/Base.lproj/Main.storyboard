@@ -279,9 +279,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateLabel" destination="SAt-9K-sOd" id="0dH-u0-r2l"/>
                                             <outlet property="idLabel" destination="QiT-wf-ySS" id="oaA-Jg-KWN"/>
                                             <outlet property="nameLabel" destination="IW8-He-KeS" id="rfz-om-3rT"/>
                                             <outlet property="numLabel" destination="rii-59-vWV" id="gx2-g9-UfA"/>
+                                            <outlet property="statusLabel" destination="JaT-X9-ZT0" id="taZ-ED-aP0"/>
+                                            <outlet property="timeLabel" destination="JaT-X9-ZT0" id="5xU-XJ-AzX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
