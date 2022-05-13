@@ -188,7 +188,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return restaurant
     }
     
-    func updateRestaurant(id: Int, numTable: Int) {
+    func updateRestaurant(id: Int, numTable: Int32) {
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Restaurant")
         let predicate = NSPredicate(format: "id = \(id)")
         fetchReq.predicate = predicate
