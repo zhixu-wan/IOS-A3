@@ -114,7 +114,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return customer
     }
     
-    func allCustomers() -> [Customer] {
+    func findCustomers() -> [Customer] {
         var customers = [Customer]()
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Customer")
         do {
@@ -143,15 +143,68 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func storeRestaurant(name: String, numTable: Int) {
+    func updateCustomer(id: Int, status: String) {
+        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Customer")
+        let predicate = NSPredicate(format: "id = \(id)")
+        fetchReq.predicate = predicate
+        do {
+            let searchResult = try getContext().fetch(fetchReq)
+            for trans in searchResult as [NSManagedObject] {
+                if let customer = trans as? Customer {
+                    if customer.id == id {
+                        customer.status = status
+                    }
+                }
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+    }
+    
+    func storeRestaurant(id: Int, name: String, numTable: Int) {
         let context = getContext()
         let restaurant = NSEntityDescription.entity(forEntityName: "Restaurant", in: context)
         let transfer = NSManagedObject(entity: restaurant!, insertInto: context)
-        
+        transfer.setValue(id, forKey: "id")
         transfer.setValue(name, forKey: "name")
         transfer.setValue(numTable, forKey: "numTable")
         
         saveContext()
     }
+    
+    func findRestaurant(id: Int) -> Restaurant {
+        var restaurant : Restaurant!
+        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Restaurant")
+        let predicate = NSPredicate(format: "id = \(id)")
+        fetchReq.predicate = predicate
+        do {
+            let searchResult = try getContext().fetch(fetchReq)
+            for trans in searchResult as [NSManagedObject] {
+                restaurant = trans as? Restaurant
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+        return restaurant
+    }
+    
+    func updateRestaurant(id: Int, numTable: Int) {
+        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Restaurant")
+        let predicate = NSPredicate(format: "id = \(id)")
+        fetchReq.predicate = predicate
+        do {
+            let searchResult = try getContext().fetch(fetchReq)
+            for trans in searchResult as [NSManagedObject] {
+                if let restaurant = trans as? Restaurant {
+                    if restaurant.id == id {
+                        restaurant.numTable = numTable
+                    }
+                }
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+    }
+    
 }
 
