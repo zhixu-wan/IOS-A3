@@ -17,8 +17,6 @@ class MyBookingCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

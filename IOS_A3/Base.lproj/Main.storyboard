@@ -360,8 +360,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Zq-Jb-n0n"/>
                     <connections>
-                        <outlet property="mySearchBar" destination="yxO-cx-0bC" id="Mjw-sY-Cuq"/>
                         <outlet property="myTableView" destination="0rP-Zn-18T" id="Pbt-Am-KIS"/>
+                        <outlet property="searchBar" destination="yxO-cx-0bC" id="3KD-P9-OCh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2s-ge-22p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
