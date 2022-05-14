@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return appDelegate.persistentContainer.viewContext
     }
     
-    func storeCustomer(id: Int, nameC: String, nameR: String, phone: String, num: Int, status: String, date: Date, time: Date) {
+    func storeCustomer(id: Int, nameC: String, nameR: String, phone: String, num: Int, status: String, date: Date) {
         let context = getContext()
         let customer = NSEntityDescription.entity(forEntityName: "Customer", in: context)
         let transfer = NSManagedObject(entity: customer!, insertInto: context)
@@ -94,7 +94,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         transfer.setValue(num, forKey: "num")
         transfer.setValue(status, forKey: "status")
         transfer.setValue(date, forKey: "date")
-        transfer.setValue(time, forKey: "time")
         
         saveContext()
     }
