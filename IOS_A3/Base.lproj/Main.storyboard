@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fek-Mt-zgR">
-                                <rect key="frame" x="60" y="606" width="111" height="36"/>
+                                <rect key="frame" x="60" y="626" width="111" height="36"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3K-Lv-8dT">
-                                <rect key="frame" x="241" y="606" width="113" height="36"/>
+                                <rect key="frame" x="241" y="626" width="113" height="36"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -42,17 +42,30 @@
                                     <segue destination="tnT-A6-aLi" kind="show" id="WWi-9G-qVg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make your eating easier and faster!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-Rp-FE3">
+                                <rect key="frame" x="37" y="388" width="340.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fek-Mt-zgR" secondAttribute="bottom" constant="220" id="NCf-vV-uBe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fek-Mt-zgR" secondAttribute="bottom" constant="200" id="NCf-vV-uBe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3K-Lv-8dT" secondAttribute="trailing" constant="60" id="Wdx-R0-OMs"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u3K-Lv-8dT" secondAttribute="bottom" constant="220" id="jCz-WE-COi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u3K-Lv-8dT" secondAttribute="bottom" constant="200" id="jCz-WE-COi"/>
                             <constraint firstItem="fek-Mt-zgR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="u19-J8-CtQ"/>
+                            <constraint firstItem="Qqg-Rp-FE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wr5-Ir-aIl"/>
+                            <constraint firstItem="Qqg-Rp-FE3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="z2d-Z2-icm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jnv-zG-B6l"/>
+                    <connections>
+                        <outlet property="slogan" destination="Qqg-Rp-FE3" id="Mu0-tJ-eeB"/>
+                        <outlet property="startButton" destination="fek-Mt-zgR" id="QEJ-dx-a8f"/>
+                        <outlet property="viewButton" destination="u3K-Lv-8dT" id="7Ft-BQ-gzS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,6 +216,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yxO-cx-0bC">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="tnT-A6-aLi" id="Ody-xK-fW4"/>
+                                </connections>
                             </searchBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IFg-So-Qk7">
                                 <rect key="frame" x="0.0" y="139" width="414" height="723"/>
@@ -344,6 +360,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Zq-Jb-n0n"/>
                     <connections>
+                        <outlet property="mySearchBar" destination="yxO-cx-0bC" id="Mjw-sY-Cuq"/>
                         <outlet property="myTableView" destination="0rP-Zn-18T" id="Pbt-Am-KIS"/>
                     </connections>
                 </viewController>
@@ -392,6 +409,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

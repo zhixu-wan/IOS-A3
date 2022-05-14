@@ -11,13 +11,16 @@ import UIKit
 
 class MyBooking: UIViewController {
     
+    @IBOutlet weak var mySearchBar: UISearchBar!
     @IBOutlet weak var myTableView: UITableView!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var customer = [Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        self.mySearchBar.placeholder = "type id to search"
     }
     
 }
@@ -46,13 +49,23 @@ extension MyBooking: UITableViewDataSource {
             })
             self.present(vc, animated: true)
         }
-        
         return cell
     }
-    
     
 }
 
 extension MyBooking: UITableViewDelegate {
     
+}
+
+extension MyBooking: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("[MyBooking searchBar] searchText: \(searchText)")
+        if searchText == "" {
+            self.customer = appDelegate.findCustomers()
+        } else {
+            
+        }
+        self.myTableView.reloadData()
+    }
 }
