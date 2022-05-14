@@ -30,8 +30,8 @@ class RestaurantList: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         RestaurantTableView.delegate = self
         RestaurantTableView.dataSource = self
-        appDelegate.storeRestaurant(id: 1, name: "pizzahut", numTable: 10)
-        appDelegate.storeRestaurant(id: 2, name: "thebest", numTable: 10 )
+        appDelegate.storeRestaurant(name: "pizzahut", numTable: 10)
+        appDelegate.storeRestaurant(name: "thebest", numTable: 10 )
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -11,12 +11,11 @@
         <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Restaurant" representedClassName="Restaurant" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="numTable" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
         <element name="Customer" positionX="-54" positionY="-9" width="128" height="149"/>
-        <element name="Restaurant" positionX="-27" positionY="27" width="128" height="74"/>
+        <element name="Restaurant" positionX="-27" positionY="27" width="128" height="59"/>
     </elements>
 </model>
