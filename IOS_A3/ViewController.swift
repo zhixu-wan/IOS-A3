@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         logo.layer.cornerRadius = 100
         logo.clipsToBounds = true
         let animation = CABasicAnimation(keyPath: "opacity")
-        animation.duration = 2
+        animation.duration = 3
         animation.fromValue = 0
         animation.toValue = 1
         logo.layer.add(animation, forKey: nil)
@@ -46,6 +46,11 @@ class ViewController: UIViewController {
     }
     
     func buttonAppear() {
+        startButton.layer.cornerRadius = 5
+        startButton.layer.masksToBounds = true
+        viewButton.layer.cornerRadius = 5
+        viewButton.layer.masksToBounds = true
+        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {
             timer in
             if self.time > 1 {
