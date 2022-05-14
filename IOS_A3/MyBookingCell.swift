@@ -13,8 +13,9 @@ class MyBookingCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var timeLabel: UIView!
-    @IBOutlet weak var statusLabel: UIView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
