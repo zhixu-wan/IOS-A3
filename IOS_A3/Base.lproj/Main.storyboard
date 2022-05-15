@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fek-Mt-zgR">
-                                <rect key="frame" x="60" y="626" width="111" height="36"/>
+                                <rect key="frame" x="60" y="626" width="114" height="36"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3K-Lv-8dT">
-                                <rect key="frame" x="241" y="626" width="113" height="36"/>
+                                <rect key="frame" x="240" y="626" width="114" height="36"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -54,7 +54,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fek-Mt-zgR" secondAttribute="bottom" constant="200" id="NCf-vV-uBe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3K-Lv-8dT" secondAttribute="trailing" constant="60" id="Wdx-R0-OMs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fek-Mt-zgR" secondAttribute="trailing" constant="240" id="ebM-bY-g59"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="u3K-Lv-8dT" secondAttribute="bottom" constant="200" id="jCz-WE-COi"/>
+                            <constraint firstItem="u3K-Lv-8dT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="240" id="mHF-cu-Izd"/>
                             <constraint firstItem="fek-Mt-zgR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="u19-J8-CtQ"/>
                             <constraint firstItem="Qqg-Rp-FE3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wr5-Ir-aIl"/>
                             <constraint firstItem="Qqg-Rp-FE3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="z2d-Z2-icm"/>
@@ -236,7 +238,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vud-aG-5tE">
-                                                            <rect key="frame" x="344" y="58" width="50" height="32"/>
+                                                            <rect key="frame" x="342" y="58" width="52" height="32"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             <state key="normal" title="Cancel">
@@ -270,16 +272,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Srx-ab-SCf">
-                                                            <rect key="frame" x="20" y="11" width="52.5" height="20"/>
+                                                            <rect key="frame" x="20" y="11" width="53" height="20"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfF-T6-bee">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="31.5" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
                                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfq-XW-wBQ">
-                                                                    <rect key="frame" x="31.5" y="0.0" width="21" height="20"/>
+                                                                    <rect key="frame" x="32" y="0.0" width="21" height="20"/>
                                                                     <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -287,7 +289,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gZH-9M-OeA">
-                                                            <rect key="frame" x="122.5" y="11" width="141" height="20"/>
+                                                            <rect key="frame" x="123" y="11" width="141" height="20"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NbG-Re-kzr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="40.5" height="20"/>
@@ -304,7 +306,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuQ-tL-6X9">
-                                                            <rect key="frame" x="313.5" y="10" width="55" height="20"/>
+                                                            <rect key="frame" x="314" y="10" width="55" height="20"/>
                                                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -315,11 +317,13 @@
                                                         <constraint firstItem="Srx-ab-SCf" firstAttribute="leading" secondItem="JaT-X9-ZT0" secondAttribute="leadingMargin" id="D3o-Dp-yzR"/>
                                                         <constraint firstItem="IuQ-tL-6X9" firstAttribute="leading" secondItem="gZH-9M-OeA" secondAttribute="trailing" constant="50" id="NPf-a0-c7I"/>
                                                         <constraint firstItem="Srx-ab-SCf" firstAttribute="top" secondItem="JaT-X9-ZT0" secondAttribute="topMargin" id="OKB-jH-0d8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IuQ-tL-6X9" secondAttribute="trailing" constant="45" id="UWe-jv-Dxs"/>
                                                         <constraint firstItem="InN-Hd-J3J" firstAttribute="leading" secondItem="JaT-X9-ZT0" secondAttribute="leadingMargin" id="b1Q-x3-qPi"/>
                                                         <constraint firstItem="gZH-9M-OeA" firstAttribute="leading" secondItem="Srx-ab-SCf" secondAttribute="trailing" constant="50" id="c67-OY-WON"/>
                                                         <constraint firstItem="IuQ-tL-6X9" firstAttribute="top" secondItem="JaT-X9-ZT0" secondAttribute="top" constant="10" id="c8Y-cp-gV2"/>
                                                         <constraint firstItem="InN-Hd-J3J" firstAttribute="top" secondItem="JaT-X9-ZT0" secondAttribute="topMargin" constant="50" id="gra-Zb-862"/>
                                                         <constraint firstAttribute="trailing" secondItem="vud-aG-5tE" secondAttribute="trailing" constant="20" id="h8O-Pe-VLA"/>
+                                                        <constraint firstItem="vud-aG-5tE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="InN-Hd-J3J" secondAttribute="trailing" constant="75" id="nXQ-Ux-LFB"/>
                                                         <constraint firstAttribute="bottom" secondItem="vud-aG-5tE" secondAttribute="bottom" constant="10" id="sQ3-88-ula"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
