@@ -43,8 +43,6 @@ extension MyBooking: UITableViewDataSource {
             vc.addAction(UIAlertAction(title: "OK", style: .destructive) {
                 _ in
                 self.appDelegate.deleteCustomer(id: Int(cell.idLabel.text!)!)
-                self.appDelegate.addNumTable(name: cell.restaurLabel.text!)
-                
             })
             self.present(vc, animated: true)
         }
