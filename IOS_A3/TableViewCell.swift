@@ -17,10 +17,11 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var pizzaHubText1: UILabel!
     
     @IBOutlet weak var Book: UIButton!
-    @IBOutlet weak var NumTable: UILabel!
-    
+
     @IBOutlet weak var locationIcon: UIImageView!
+    
     @IBOutlet weak var location: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
