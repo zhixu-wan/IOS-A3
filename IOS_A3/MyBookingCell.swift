@@ -23,7 +23,6 @@ class MyBookingCell: UITableViewCell {
     }
 
     @IBAction func cancel(_ sender: Any) {
-        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -37,6 +37,12 @@ extension MyBooking: UITableViewDataSource {
         cell.numLabel.text = "\(customers[indexPath.row].num)"
         cell.statusLabel.text = customers[indexPath.row].status
         cell.restaurLabel.text = customers[indexPath.row].nameR
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        cell.dateLabel.text = dateFormatter.string(from: customers[indexPath.row].date!)
+        
         cell.cancel() {
             let vc = UIAlertController(title:"Warning!", message: "Make sure you want to cancel the reservation?", preferredStyle: .alert)
             vc.addAction(UIAlertAction(title: "Back", style: .cancel))
