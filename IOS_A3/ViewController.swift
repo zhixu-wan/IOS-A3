@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         logo.layer.cornerRadius = 100
         logo.clipsToBounds = true
         let animation = CABasicAnimation(keyPath: "opacity")
-        animation.duration = 3
+        animation.duration = 2
         animation.fromValue = 0
         animation.toValue = 1
         logo.layer.add(animation, forKey: nil)

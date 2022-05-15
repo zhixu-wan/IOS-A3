@@ -22,9 +22,7 @@ class RestaurantList: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let location = [("5 Kings Street Zetland"),
                 ("28 Ray Street Mascot")]
-    let NumTable = [("Available Table： "),
-                    ("Available Table： ")]
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +30,6 @@ class RestaurantList: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         RestaurantTableView.delegate = self
         RestaurantTableView.dataSource = self
-        appDelegate.storeRestaurant(name: "pizzahut", numTable: 10)
-        appDelegate.storeRestaurant(name: "thebest", numTable: 10 )
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -43,13 +39,11 @@ class RestaurantList: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = RestaurantTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! TableViewCell
-        let restaurants = appDelegate.listRestaurant()
         cell.pizzaHubCell.image = self.imagesF[indexPath.row]
         cell.pizzaHubTitle.text = self.titlesF[indexPath.row]
         cell.pizzaHubText1.text = self.desF[indexPath.row]
         cell.locationIcon.image = self.imagesLocationIcon[indexPath.row]
         cell.location.text = self.location[indexPath.row]
-        cell.NumTable.text = self.NumTable[indexPath.row] + "\(restaurants[indexPath.row].numTable)"
         return cell
     }
 }
