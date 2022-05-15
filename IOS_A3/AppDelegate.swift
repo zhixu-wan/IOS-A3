@@ -114,7 +114,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return customer
     }
     
-    func findCustomers() -> [Customer] {
+    func listCustomers() -> [Customer] {
         var customers = [Customer]()
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Customer")
         do {
@@ -171,20 +171,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         saveContext()
     }
     
-    func findRestaurant(id: Int) -> Restaurant {
-        var restaurant : Restaurant!
+    func listRestaurant() -> [Restaurant] {
+        var restaurants = [Restaurant]()
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Restaurant")
-        let predicate = NSPredicate(format: "id = \(id)")
-        fetchReq.predicate = predicate
         do {
             let searchResult = try getContext().fetch(fetchReq)
             for trans in searchResult as [NSManagedObject] {
-                restaurant = trans as? Restaurant
+                let restaurant = trans as! Restaurant
+                restaurants.append(restaurant)
             }
         } catch {
             print("Error with request: \(error)")
         }
-        return restaurant
+        return restaurants
     }
     
     func addNumTable(name: String) {

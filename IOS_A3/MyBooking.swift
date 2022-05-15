@@ -28,12 +28,12 @@ class MyBooking: UIViewController {
 
 extension MyBooking: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return appDelegate.findCustomers().count
+        return appDelegate.listCustomers().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "myBookingCell") as! MyBookingCell
-        let customers = appDelegate.findCustomers()
+        let customers = appDelegate.listCustomers()
         cell.idLabel.text = "\(customers[indexPath.row].id)"
         cell.nameLabel.text = customers[indexPath.row].nameC
         cell.numLabel.text = "\(customers[indexPath.row].num)"
