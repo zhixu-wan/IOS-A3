@@ -35,10 +35,10 @@ extension MyBooking: UITableViewDataSource {
         let cell = myTableView.dequeueReusableCell(withIdentifier: "myBookingCell") as! MyBookingCell
         let customers = appDelegate.listCustomers()
         cell.idLabel.text = "\(customers[indexPath.row].id)"
-        cell.nameLabel.text = customers[indexPath.row].nameC
+       cell.nameLabel.text = customers[indexPath.row].nameC
         cell.numLabel.text = "\(customers[indexPath.row].num)"
         cell.statusLabel.text = customers[indexPath.row].status
-        cell.restaurLabel.text = customers[indexPath.row].nameR
+       cell.restaurLabel.text = customers[indexPath.row].nameR
         cell.cancel() {
             let vc = UIAlertController(title:"Warning!", message: "Make sure you want to cancel the reservation?", preferredStyle: .alert)
             vc.addAction(UIAlertAction(title: "Back", style: .cancel))
