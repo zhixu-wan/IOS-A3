@@ -21,6 +21,7 @@ class MyBooking: UIViewController {
         // Do any additional setup after loading the view.
         customers = appDelegate.listCustomers()
         self.searchBar.placeholder = "type id to search"
+        appDelegate.updateCustomer()
     }
     
 }
