@@ -131,10 +131,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func deleteCustomer(id: Int) {
         let context = getContext()
-        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "Customer")
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Customer")
         let predicate = NSPredicate(format: "id = \(id)")
-        fetchReq.predicate = predicate
-        let deleteReq = NSBatchDeleteRequest(fetchRequest: fetchReq)
+        deleteFetch.predicate = predicate
+        let deleteReq = NSBatchDeleteRequest(fetchRequest: deleteFetch)
         do {
             try context.execute(deleteReq)
             try context.save()
@@ -143,7 +143,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func updateCustomer(id: Int, status: String) {
+    func updateCustomer() {
+        let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Customer")
+        do {
+            let searchResult = try getContext().fetch(fetchReq)
+            for trans in searchResult as [NSManagedObject] {
+                let customer = trans as! Customer
+                let today = Date()
+                let zone = NSTimeZone.system
+                let interval = zone.secondsFromGMT()
+                let now = today.addingTimeInterval(TimeInterval(interval))
+                if now > customer.date! {
+                    customer.status = "Completed"
+                } else {
+                    customer.status = customer.status
+                }
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
+    }
+    
+    func updateStatus(id: Int) {
         let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "Customer")
         let predicate = NSPredicate(format: "id = \(id)")
         fetchReq.predicate = predicate
@@ -151,8 +172,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let searchResult = try getContext().fetch(fetchReq)
             for trans in searchResult as [NSManagedObject] {
                 if let customer = trans as? Customer {
-                    if customer.id == id {
-                        customer.status = status
+                    if id == customer.id {
+                        customer.status = "Cancelled"
                     }
                 }
             }

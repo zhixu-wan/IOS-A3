@@ -7,8 +7,12 @@
 
 import UIKit
 
-class MyBookingCell: UITableViewCell {
+protocol myBookingCellDelegate {
+    func cancelReser(id: Int, status: String)
+}
 
+class MyBookingCell: UITableViewCell {
+    var delegate: myBookingCellDelegate?
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var restaurLabel: UILabel!
@@ -23,6 +27,7 @@ class MyBookingCell: UITableViewCell {
     }
 
     @IBAction func cancel(_ sender: Any) {
+        delegate?.cancelReser(id: Int(idLabel.text!)!, status: statusLabel.text!)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

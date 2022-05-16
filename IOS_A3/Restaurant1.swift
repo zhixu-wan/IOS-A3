@@ -20,7 +20,7 @@ class Restaurant1: UIViewController {
     }
     
 }
-extension ViewController: UITableViewDataSource{
+/*extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -35,4 +35,4 @@ extension ViewController: UITableViewDataSource{
 }
 extension ViewController: UITableViewDelegate{
     
-}
+}*/
