@@ -139,7 +139,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             try context.execute(deleteReq)
             try context.save()
         } catch {
-            print("There was an error")
+            
         }
     }
     
