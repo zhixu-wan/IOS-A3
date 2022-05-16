@@ -479,8 +479,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="7oi-LU-Ws1"/>
                     <connections>
-                        <outlet property="MTV" destination="Lc6-Mv-cL9" id="a4C-C6-4xr"/>
-                        <outlet property="myView" destination="Lc6-Mv-cL9" id="aao-BA-6wV"/>
+                        <outlet property="myView" destination="Lc6-Mv-cL9" id="6OV-Q7-WjK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJS-dY-NDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
