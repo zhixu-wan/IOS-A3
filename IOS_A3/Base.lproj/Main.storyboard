@@ -487,10 +487,10 @@
             </objects>
             <point key="canvasLocation" x="2779.7101449275365" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer Controller-->
         <scene sceneID="zLw-T0-MgJ">
             <objects>
-                <viewController id="NHS-TD-Uyp" sceneMemberID="viewController">
+                <viewController id="NHS-TD-Uyp" customClass="CustomerController" customModule="IOS_A3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nFo-rN-H21">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,11 +552,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HL9-U2-IFG">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="HL9-U2-IFG">
                                         <rect key="frame" x="-2" y="48" width="331" height="44.5"/>
+                                        <connections>
+                                            <action selector="change:" destination="NHS-TD-Uyp" eventType="valueChanged" id="D3P-SY-PZw"/>
+                                        </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymi-il-Pq9">
-                                        <rect key="frame" x="143" y="99.5" width="41.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymi-il-Pq9">
+                                        <rect key="frame" x="158.5" y="99.5" width="10.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -584,6 +587,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y4Y-cg-qwx"/>
+                    <connections>
+                        <outlet property="CusName" destination="mAO-TF-88Z" id="N5C-Q1-Fle"/>
+                        <outlet property="PeoNumSlider" destination="HL9-U2-IFG" id="avb-BD-MPb"/>
+                        <outlet property="PhoneNumber" destination="eaS-mq-XLb" id="RRM-IW-eeq"/>
+                        <outlet property="numLabel" destination="Ymi-il-Pq9" id="5EJ-KS-1Yt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCF-hg-Qda" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
