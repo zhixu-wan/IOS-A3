@@ -12,7 +12,6 @@
 		71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9B282CFF370007B659 /* AppDelegate.swift */; };
 		71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9D282CFF370007B659 /* SceneDelegate.swift */; };
 		71D26BA0282CFF370007B659 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9F282CFF370007B659 /* ViewController.swift */; };
-		71D26BA3282CFF370007B659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D26BA1282CFF370007B659 /* Main.storyboard */; };
 		71D26BA6282CFF370007B659 /* IOS_A3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 71D26BA4282CFF370007B659 /* IOS_A3.xcdatamodeld */; };
 		71D26BA8282CFF3A0007B659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D26BA7282CFF3A0007B659 /* Assets.xcassets */; };
 		71D26BAB282CFF3A0007B659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D26BA9282CFF3A0007B659 /* LaunchScreen.storyboard */; };
@@ -150,7 +149,6 @@
 			files = (
 				71D26BAB282CFF3A0007B659 /* LaunchScreen.storyboard in Resources */,
 				71D26BA8282CFF3A0007B659 /* Assets.xcassets in Resources */,
-				71D26BA3282CFF370007B659 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
