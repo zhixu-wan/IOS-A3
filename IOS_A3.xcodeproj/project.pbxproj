@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0489C7DD283347330087E87F /* customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489C7DC283347330087E87F /* customer.swift */; };
+		0489C7DE2833487A0087E87F /* customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0489C7DC283347330087E87F /* customer.swift */; };
 		7141FEB7282D07C000F5E3C5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7141FEB6282D07C000F5E3C5 /* TableViewCell.swift */; };
 		71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9B282CFF370007B659 /* AppDelegate.swift */; };
 		71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9D282CFF370007B659 /* SceneDelegate.swift */; };
@@ -170,7 +170,7 @@
 				A5BD70D4282D55F900EA5211 /* MyBookingCell.swift in Sources */,
 				A58BF0F0282D742C00BDBB84 /* Restaurant2.swift in Sources */,
 				71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */,
-				0489C7DD283347330087E87F /* customer.swift in Sources */,
+				0489C7DE2833487A0087E87F /* customer.swift in Sources */,
 				71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
