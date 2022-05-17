@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		043922C12833B83E00179296 /* CustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043922C02833B83E00179296 /* CustomerController.swift */; };
+		043922C52833BECA00179296 /* DatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043922C42833BECA00179296 /* DatePickerController.swift */; };
+		043922C72833BF3900179296 /* DateContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043922C62833BF3900179296 /* DateContent.swift */; };
 		7141FEB7282D07C000F5E3C5 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7141FEB6282D07C000F5E3C5 /* TableViewCell.swift */; };
 		71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9B282CFF370007B659 /* AppDelegate.swift */; };
 		71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D26B9D282CFF370007B659 /* SceneDelegate.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		043922C02833B83E00179296 /* CustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerController.swift; sourceTree = "<group>"; };
+		043922C42833BECA00179296 /* DatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerController.swift; sourceTree = "<group>"; };
+		043922C62833BF3900179296 /* DateContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateContent.swift; sourceTree = "<group>"; };
 		7141FEB6282D07C000F5E3C5 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		71D26B98282CFF360007B659 /* IOS_A3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_A3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D26B9B282CFF370007B659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				A58BF0ED282D73F500BDBB84 /* Restaurant1.swift */,
 				A58BF0EF282D742C00BDBB84 /* Restaurant2.swift */,
 				043922C02833B83E00179296 /* CustomerController.swift */,
+				043922C42833BECA00179296 /* DatePickerController.swift */,
+				043922C62833BF3900179296 /* DateContent.swift */,
 			);
 			path = IOS_A3;
 			sourceTree = "<group>";
@@ -163,11 +169,13 @@
 				A5BD70C8282D04F200EA5211 /* MyBooking.swift in Sources */,
 				71D26BA0282CFF370007B659 /* ViewController.swift in Sources */,
 				A58BF0EE282D73F500BDBB84 /* Restaurant1.swift in Sources */,
+				043922C72833BF3900179296 /* DateContent.swift in Sources */,
 				71D26BA6282CFF370007B659 /* IOS_A3.xcdatamodeld in Sources */,
 				7141FEB7282D07C000F5E3C5 /* TableViewCell.swift in Sources */,
 				A5BD70D4282D55F900EA5211 /* MyBookingCell.swift in Sources */,
 				043922C12833B83E00179296 /* CustomerController.swift in Sources */,
 				A58BF0F0282D742C00BDBB84 /* Restaurant2.swift in Sources */,
+				043922C52833BECA00179296 /* DatePickerController.swift in Sources */,
 				71D26B9C282CFF370007B659 /* AppDelegate.swift in Sources */,
 				71D26B9E282CFF370007B659 /* SceneDelegate.swift in Sources */,
 			);
