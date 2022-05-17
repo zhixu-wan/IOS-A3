@@ -612,10 +612,10 @@
             </objects>
             <point key="canvasLocation" x="3518.840579710145" y="94.419642857142847"/>
         </scene>
-        <!--Date Content-->
+        <!--Date Picker Controller-->
         <scene sceneID="yte-GL-nBx">
             <objects>
-                <viewController id="Y0v-Lq-Kpu" customClass="DateContent" sceneMemberID="viewController">
+                <viewController id="Y0v-Lq-Kpu" customClass="DatePickerController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vqm-Zp-wbg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
