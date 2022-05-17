@@ -28,14 +28,14 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
             for index in 0..<totalCount{
                 let imageView:UIImageView = UIImageView();
                 let imageX:CGFloat = CGFloat(index) * imageW;
-                imageView.frame = CGRectMake(imageX, imageY, imageW, imageH)
+                imageView.frame = CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
                 let name:String = String(format: "pizza%d", index+1);
                 imageView.image = UIImage(named: name);
                 self.ScrollView.showsHorizontalScrollIndicator = false
                 self.ScrollView.addSubview(imageView)
             }
             let contentW:CGFloat = imageW * CGFloat(totalCount)
-            self.ScrollView.contentSize = CGSizeMake(contentW, 0)
+        self.ScrollView.contentSize = CGSize(width: contentW, height: 0)
             self.ScrollView.isPagingEnabled = true
             self.ScrollView.delegate = self
             self.pageControl.numberOfPages = totalCount
@@ -50,7 +50,7 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
                 page += 1
             }
             let x:CGFloat = CGFloat(page) * self.ScrollView.frame.size.width;
-            self.ScrollView.contentOffset = CGPointMake(x, 0)
+        self.ScrollView.contentOffset = CGPoint(x: x, y: 0)
         }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
