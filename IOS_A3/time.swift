@@ -1,39 +1,22 @@
 //
-//  Restaurant2.swift
-//  IOS_A3
+//  ViewController.swift
+//  DatePickerUI
 //
-//  Created by Zhixu Wan on 2022/5/13.
+//  Created by ZhengYZe on 2022/5/18.
 //
-
-import Foundation
 
 import UIKit
 
-@available(iOS 13.4, *)
-class CustomerInf: UIViewController {
-    @IBOutlet weak var nameTx: UITextField!
-    
-    @IBOutlet weak var phoneTx: UITextField!
-    
-    @IBOutlet weak var peopleNum: UILabel!
-    
-    
-    @IBOutlet weak var peopleNumSlider: UISlider!
-    
-    
+class ViewController: UIViewController {
+
     @IBOutlet weak var bookingTextfield: UITextField!
     let dataPicker = UIDatePicker()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         createDatepicker()
     }
-    
-    @IBAction func Change(_ sender: Any) {
-        let value = Int(peopleNumSlider.value)
-        peopleNum.text = "\(value)"
-    }
+
     func createToolbar() -> UIToolbar{
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -61,3 +44,4 @@ class CustomerInf: UIViewController {
     
     
 }
+
