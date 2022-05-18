@@ -23,7 +23,8 @@ class CustomerInf: UIViewController {
     
     @IBOutlet weak var bookingTextfield: UITextField!
     let dataPicker = UIDatePicker()
-
+    var nameRestaurant = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

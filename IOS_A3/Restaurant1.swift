@@ -12,11 +12,14 @@ import UIKit
 class Restaurant1: UIViewController, UIScrollViewDelegate {
     var timer:Timer!
 
+    @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        restaurantName.text = "Pizza Hut"
+        nextButton()
         
     }
     func pictureGallery(){   //实现图片滚动播放；
@@ -62,6 +65,24 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
     
     func addTimer(){
         self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: Selector(("nextImage:")), userInfo: nil, repeats: true)
+    }
+    
+    func nextButton() {
+        let game = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))
+        game.layer.cornerRadius = 50
+        game.clipsToBounds = true
+        game.setImage(UIImage(named: "go"), for: .normal)
+        view.addSubview(game)
+        game.addTarget(self, action: #selector(gameClick), for: .touchUpInside)
+    }
+    
+    @objc func gameClick(sender: UIButton) {
+        performSegue(withIdentifier: "toFillDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! CustomerInf
+        controller.nameRestaurant = restaurantName.text!
     }
 }
 

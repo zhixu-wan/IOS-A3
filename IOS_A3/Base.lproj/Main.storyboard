@@ -106,6 +106,9 @@
                                 <state key="normal" title="Book now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1S3-Fr-dBG" kind="show" id="bmP-o2-K52"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2v9-vJ-4BM">
                                 <rect key="frame" x="177.5" y="626" width="59" height="31.5"/>
@@ -132,6 +135,9 @@
                                 <state key="normal" title="Book now">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="mSx-dw-LT1" kind="show" id="wEn-Jv-sTm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bmh-lH-90f"/>
@@ -316,16 +322,32 @@
             </objects>
             <point key="canvasLocation" x="1424.6376811594205" y="840.40178571428567"/>
         </scene>
-        <!--Booking-->
+        <!--Restaurant2-->
+        <scene sceneID="gRm-CJ-kuE">
+            <objects>
+                <viewController id="mSx-dw-LT1" customClass="Restaurant2" customModule="IOS_A3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1aT-or-fYq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="J2J-n6-gHc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EVj-S0-mho"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zik-Av-mhX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2400" y="840"/>
+        </scene>
+        <!--Restaurant1-->
         <scene sceneID="OyG-SH-xmV">
             <objects>
-                <viewController title="Booking" id="1S3-Fr-dBG" customClass="Restaurant1" customModule="IOS_A3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Restaurant1" id="1S3-Fr-dBG" customClass="Restaurant1" customModule="IOS_A3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C1a-kp-4ma">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Hut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCO-X9-yp7">
-                                <rect key="frame" x="107" y="97" width="200" height="43"/>
+                                <rect key="frame" x="107" y="141" width="200" height="43"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="36"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
@@ -341,15 +363,6 @@
                                 <rect key="frame" x="146" y="478" width="123" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qo0-fN-8oA">
-                                <rect key="frame" x="174" y="670" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <segue destination="Q9l-Pz-Z8x" kind="show" id="LEA-pm-NoA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JZ8-Vp-HNC"/>
                         <color key="backgroundColor" red="0.40149368523316065" green="0.35460231141181764" blue="0.38353072627376161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -363,6 +376,8 @@
                     <connections>
                         <outlet property="ScrollView" destination="lrS-C8-ryE" id="KOP-nz-9ug"/>
                         <outlet property="pageControl" destination="lrQ-iO-d93" id="T96-6P-VhQ"/>
+                        <outlet property="restaurantName" destination="WCO-X9-yp7" id="2Xc-wh-Rx9"/>
+                        <segue destination="Q9l-Pz-Z8x" kind="show" identifier="toFillDetail" id="NHq-g4-QDs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJS-dY-NDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -374,11 +389,11 @@
             <objects>
                 <viewController id="Q9l-Pz-Z8x" customClass="CustomerInf" customModule="IOS_A3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="epd-tl-xjG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="iKI-tA-voD" userLabel="NameStackView">
-                                <rect key="frame" x="120" y="154" width="172.5" height="34"/>
+                                <rect key="frame" x="120" y="198" width="172.5" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVa-Og-ocM">
                                         <rect key="frame" x="0.0" y="0.0" width="49.5" height="34"/>
@@ -398,7 +413,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="Qni-GF-t7f">
-                                <rect key="frame" x="100.5" y="208" width="212" height="34"/>
+                                <rect key="frame" x="100.5" y="252" width="212" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhoneNum:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-eL-Efc">
                                         <rect key="frame" x="0.0" y="0.0" width="89" height="34"/>
@@ -418,7 +433,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yve-0s-saa">
-                                <rect key="frame" x="106.5" y="272" width="200" height="100"/>
+                                <rect key="frame" x="106.5" y="316" width="200" height="100"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PeopleNum:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kaP-BD-Kjk">
                                         <rect key="frame" x="46.5" y="0.0" width="107" height="40"/>
@@ -449,14 +464,14 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Booking Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtf-uK-Gii">
-                                <rect key="frame" x="50" y="84" width="314" height="30"/>
+                                <rect key="frame" x="50" y="128" width="314" height="30"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUf-EB-n31">
-                                <rect key="frame" x="179.5" y="751" width="54" height="31"/>
+                                <rect key="frame" x="179.5" y="771" width="54" height="31"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Next"/>
@@ -465,7 +480,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gec-E6-3Y8">
-                                <rect key="frame" x="106.5" y="412" width="200" height="34"/>
+                                <rect key="frame" x="106.5" y="456" width="200" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twE-cI-peF">
                                         <rect key="frame" x="0.0" y="0.0" width="40.5" height="34"/>

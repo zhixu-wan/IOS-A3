@@ -33,7 +33,7 @@ class RestaurantList: UIViewController {
         let logoRestaurant = UIImageView(image: UIImage(named: "pizzahut"))
         logoRestaurant.layer.frame = CGRect(x: view.layer.frame.midX-207, y: view.layer.frame.minY+90, width: 414, height: 180)
         view.addSubview(logoRestaurant)
-        nameR1.text = "Pizza Hub"
+        nameR1.text = "Pizza Hut"
         desR1.text = "TRIPLE CHEESE PEPPERONI & PORTOBELLO PIZZA for only $7"
         locationR1.text = "5 Kings Street Zetland"
         bookR1.layer.cornerRadius = 5
