@@ -59,5 +59,9 @@ class CustomerInf: UIViewController {
         self.view.endEditing(true)
     }
     
+   @IBAction func SaveCus(_ sender: Any) {
+     //   let appDelegate = UIApplication.shared.delegate as! AppDelegate
+       // appDelegate.storeCustomer(id: 0, nameC: nameTx.text ?? " ", nameR: " ", phone: Int(phoneTx.text)!, num: <#T##Int#>, status: <#T##String#>, date: <#T##Date#>)
+    }
     
 }
