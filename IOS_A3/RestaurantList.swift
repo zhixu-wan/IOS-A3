@@ -9,41 +9,51 @@ import Foundation
 
 import UIKit
 
-class RestaurantList: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RestaurantList: UIViewController {
 
-    @IBOutlet weak var RestaurantTableView: UITableView!
+    @IBOutlet weak var nameR1: UILabel!
+    @IBOutlet weak var desR1: UILabel!
+    @IBOutlet weak var locationR1: UILabel!
+    @IBOutlet weak var nameR2: UILabel!
+    @IBOutlet weak var desR2: UILabel!
+    @IBOutlet weak var locationR2: UILabel!
     
-    let titlesF = [("Pizza Hub"),("The Best")]
-    let desF = [("TRIPLE CHEESE PEPPERONI & PORTOBELLO PIZZA for only $7"),
-                ("Sydney’s best fine diner and a world-class culinary experience in every respect.")]
-    let imagesF = [UIImage(named: "pizzahut"),
-                   UIImage(named: "thebest"),]
-    let imagesLocationIcon = [UIImage(named: "locationIcon"), UIImage(named: "locationIcon")]
-    
-    let location = [("5 Kings Street Zetland"),
-                ("28 Ray Street Mascot")]
-    
+    @IBOutlet weak var bookR1: UIButton!
+    @IBOutlet weak var bookR2: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        firstRestaurant()
+        secondRestaurant()
         
-        RestaurantTableView.delegate = self
-        RestaurantTableView.dataSource = self
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    
+    func firstRestaurant() {
+        let logoRestaurant = UIImageView(image: UIImage(named: "pizzahut"))
+        logoRestaurant.layer.frame = CGRect(x: view.layer.frame.midX-207, y: view.layer.frame.minY+90, width: 414, height: 180)
+        view.addSubview(logoRestaurant)
+        nameR1.text = "Pizza Hub"
+        desR1.text = "TRIPLE CHEESE PEPPERONI & PORTOBELLO PIZZA for only $7"
+        locationR1.text = "5 Kings Street Zetland"
+        bookR1.layer.cornerRadius = 5
+        bookR1.layer.masksToBounds = true
+        let locationIcon = UIImageView(image: UIImage(named: "locationIcon"))
+        locationIcon.layer.frame = CGRect(x: view.layer.frame.minX+10, y: view.layer.frame.midY-100, width: 35, height: 35)
+        view.addSubview(locationIcon)
     }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titlesF.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = RestaurantTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath) as! TableViewCell
-        cell.pizzaHubCell.image = self.imagesF[indexPath.row]
-        cell.pizzaHubTitle.text = self.titlesF[indexPath.row]
-        cell.pizzaHubText1.text = self.desF[indexPath.row]
-        cell.locationIcon.image = self.imagesLocationIcon[indexPath.row]
-        cell.location.text = self.location[indexPath.row]
-        return cell
+    
+    func secondRestaurant() {
+        let logoRestaurant = UIImageView(image: UIImage(named: "thebest"))
+        logoRestaurant.layer.frame = CGRect(x: view.layer.frame.midX-207, y: view.layer.frame.midY, width: 414, height: 180)
+        view.addSubview(logoRestaurant)
+        nameR2.text = "The Best"
+        desR2.text = "Sydney’s best fine diner and a world-class culinary experience."
+        locationR2.text = "28 Ray Street Mascot"
+        bookR2.layer.cornerRadius = 5
+        bookR2.layer.masksToBounds = true
+        let locationIcon = UIImageView(image: UIImage(named: "locationIcon"))
+        locationIcon.layer.frame = CGRect(x: view.layer.frame.minX+10, y: view.layer.frame.midY+258, width: 35, height: 35)
+        view.addSubview(locationIcon)
     }
 }
