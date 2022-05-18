@@ -19,8 +19,7 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         
     }
-    func pictureGallery(){   //实现图片滚动播放；
-            //image width
+    func pictureGallery(){ 
             let imageW:CGFloat = self.ScrollView.frame.size.width
             let imageH:CGFloat = self.ScrollView.frame.size.height
             let imageY:CGFloat = 0
