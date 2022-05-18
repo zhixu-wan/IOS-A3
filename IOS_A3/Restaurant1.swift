@@ -68,21 +68,21 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
     }
     
     func nextButton() {
-        let game = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))
-        game.layer.cornerRadius = 50
-        game.clipsToBounds = true
-        game.setImage(UIImage(named: "go"), for: .normal)
-        view.addSubview(game)
-        game.addTarget(self, action: #selector(gameClick), for: .touchUpInside)
+        let next = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))
+        next.layer.cornerRadius = 50
+        next.clipsToBounds = true
+        next.setImage(UIImage(named: "go"), for: .normal)
+        view.addSubview(next)
+        next.addTarget(self, action: #selector(bookClick), for: .touchUpInside)
     }
     
-    @objc func gameClick(sender: UIButton) {
-        performSegue(withIdentifier: "toFillDetail", sender: nil)
+    @objc func bookClick(sender: UIButton) {
+        performSegue(withIdentifier: "fromR1Segue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! CustomerInf
-        controller.nameRestaurant = restaurantName.text!
+        //let controller = segue.destination as! CustomerInf
+        //controller.nameRestaurant = restaurantName.text!
     }
 }
 
