@@ -335,11 +335,26 @@
                     <view key="view" contentMode="scaleToFill" id="1aT-or-fYq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Best" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxa-A0-DiK">
+                                <rect key="frame" x="107" y="143" width="200" height="43"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="36"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J2J-n6-gHc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fxa-A0-DiK" firstAttribute="top" secondItem="J2J-n6-gHc" secondAttribute="top" constant="55" id="GY9-Fs-eAb"/>
+                            <constraint firstItem="fxa-A0-DiK" firstAttribute="leading" secondItem="J2J-n6-gHc" secondAttribute="leading" constant="107" id="JLB-nb-tQ4"/>
+                            <constraint firstItem="J2J-n6-gHc" firstAttribute="trailing" secondItem="fxa-A0-DiK" secondAttribute="trailing" constant="107" id="csS-N8-0a9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EVj-S0-mho"/>
                     <connections>
+                        <outlet property="restaurantName" destination="fxa-A0-DiK" id="ZaI-uK-snO"/>
                         <segue destination="Q9l-Pz-Z8x" kind="show" identifier="fromR2Segue" id="Tus-YK-wI8"/>
                     </connections>
                 </viewController>
@@ -356,7 +371,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Hut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCO-X9-yp7">
-                                <rect key="frame" x="107" y="141" width="200" height="43"/>
+                                <rect key="frame" x="107" y="143" width="200" height="43"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="36"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
@@ -377,7 +392,7 @@
                         <color key="backgroundColor" red="0.40149368523316065" green="0.35460231141181764" blue="0.38353072627376161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JZ8-Vp-HNC" firstAttribute="trailing" secondItem="WCO-X9-yp7" secondAttribute="trailing" constant="107" id="R0A-E1-e3y"/>
-                            <constraint firstItem="WCO-X9-yp7" firstAttribute="top" secondItem="JZ8-Vp-HNC" secondAttribute="top" constant="53" id="eeh-p0-0hg"/>
+                            <constraint firstItem="WCO-X9-yp7" firstAttribute="top" secondItem="JZ8-Vp-HNC" secondAttribute="top" constant="55" id="eeh-p0-0hg"/>
                             <constraint firstItem="WCO-X9-yp7" firstAttribute="leading" secondItem="JZ8-Vp-HNC" secondAttribute="leading" constant="107" id="okJ-Iq-jMp"/>
                         </constraints>
                     </view>

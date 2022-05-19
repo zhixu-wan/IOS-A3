@@ -11,6 +11,8 @@ import UIKit
 
 class Restaurant2: UIViewController {
     
+    @IBOutlet weak var restaurantName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,4 +32,8 @@ class Restaurant2: UIViewController {
         performSegue(withIdentifier: "fromR2Segue", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! CustomerInf
+        controller.nameRestaurant = restaurantName.text!
+    }
 }
