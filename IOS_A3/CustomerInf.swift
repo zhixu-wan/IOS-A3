@@ -53,8 +53,8 @@ class CustomerInf: UIViewController {
     
     @objc func donePressed(){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .medium
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
         self.bookingTextfield.text = dateFormatter.string(from: dataPicker.date)
         self.view.endEditing(true)
     }
@@ -65,9 +65,10 @@ class CustomerInf: UIViewController {
         let zone = NSTimeZone.system
         let interval = zone.secondsFromGMT()
         let now = today.addingTimeInterval(TimeInterval(interval))
+        let id = appDelegate.listCustomers().count + 1
         if now < bookingDate {
             if nameTx.text!.count > 0 && phoneTx.text!.count > 0 && peopleNum.text!.count > 0 && bookingTextfield.text!.count > 0 {
-                appDelegate.storeCustomer(id: 1, nameC: nameTx.text!, nameR: nameRestaurant, phone: phoneTx.text!, num: Int(peopleNum.text!)!, status: "on-going", date: bookingDate)
+                appDelegate.storeCustomer(id: id, nameC: nameTx.text!, nameR: nameRestaurant, phone: phoneTx.text!, num: Int(peopleNum.text!)!, status: "on-going", date: bookingDate)
                 let vc = UIAlertController(title: "Success！", message: "you have completed the reservation", preferredStyle: .alert)
                 vc.addAction(UIAlertAction(title: "OK", style: .cancel) {
                     _ in
