@@ -9,7 +9,7 @@ import Foundation
 
 import UIKit
 
-@available(iOS 13.4, *)
+
 class CustomerInf: UIViewController {
     @IBOutlet weak var nameTx: UITextField!
     @IBOutlet weak var phoneTx: UITextField!
@@ -26,6 +26,8 @@ class CustomerInf: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         createDatepicker()
+        save.layer.cornerRadius = 5
+        save.layer.masksToBounds = true
     }
     
     @IBAction func Change(_ sender: Any) {
@@ -42,7 +44,7 @@ class CustomerInf: UIViewController {
         return toolbar
     }
     func createDatepicker(){
-        dataPicker.preferredDatePickerStyle = .wheels
+        //dataPicker.preferredDatePickerStyle = .wheels
         dataPicker.timeZone = .autoupdatingCurrent
         bookingTextfield.inputView = dataPicker
         bookingTextfield.inputAccessoryView = createToolbar()
@@ -58,18 +60,22 @@ class CustomerInf: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: Any) {
-        save.layer.cornerRadius = 5
-        save.layer.masksToBounds = true
         let bookingDate = dataPicker.date
-        appDelegate.storeCustomer(id: 1, nameC: nameTx.text!, nameR: nameRestaurant, phone: phoneTx.text!, num: Int(peopleNum.text!)!, status: "on-going", date: bookingDate)
-        let vc = UIAlertController(title: "Success！", message: "you have completed the reservation", preferredStyle: .alert)
-        vc.addAction(UIAlertAction(title: "OK", style: .cancel) {
-            _ in
-            let vc = self.storyboard?.instantiateViewController(identifier: "HomePage") as! ViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-            vc.navigationItem.setHidesBackButton(true, animated: true)
-        })
-        self.present(vc, animated: true)
+        if nameTx.text!.count > 0 && phoneTx.text!.count > 0 && peopleNum.text!.count > 0 && bookingTextfield.text!.count > 0 {
+            appDelegate.storeCustomer(id: 1, nameC: nameTx.text!, nameR: nameRestaurant, phone: phoneTx.text!, num: Int(peopleNum.text!)!, status: "on-going", date: bookingDate)
+            let vc = UIAlertController(title: "Success！", message: "you have completed the reservation", preferredStyle: .alert)
+            vc.addAction(UIAlertAction(title: "OK", style: .cancel) {
+                _ in
+                let vc = self.storyboard?.instantiateViewController(identifier: "HomePage") as! ViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+                vc.navigationItem.setHidesBackButton(true, animated: true)
+            })
+            self.present(vc, animated: true)
+        } else {
+            let vc = UIAlertController(title: "Warning!", message: "You should fill all booking information", preferredStyle: .alert)
+            vc.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(vc, animated: true)
+        }
     }
     
 }

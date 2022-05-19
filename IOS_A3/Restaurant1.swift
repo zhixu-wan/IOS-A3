@@ -77,12 +77,12 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func bookClick(sender: UIButton) {
-        performSegue(withIdentifier: "fromR1Segue", sender: nil)
+        //performSegue(withIdentifier: "fromR1Segue", sender: nil)
+        let vc = self.storyboard?.instantiateViewController(identifier: "CustomerInf") as! CustomerInf
+        self.navigationController?.pushViewController(vc, animated: true)
+        vc.navigationItem.setHidesBackButton(true, animated: true)
+        vc.nameRestaurant = restaurantName.text!
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //let controller = segue.destination as! CustomerInf
-        //controller.nameRestaurant = restaurantName.text!
-    }
 }
 
