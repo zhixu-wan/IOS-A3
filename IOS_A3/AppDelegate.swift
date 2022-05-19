@@ -149,7 +149,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let searchResult = try getContext().fetch(fetchReq)
             for trans in searchResult as [NSManagedObject] {
                 let customer = trans as! Customer
-                let now = Date()
+                let today = Date()
+                let zone = NSTimeZone.system
+                let interval = zone.secondsFromGMT()
+                let now = today.addingTimeInterval(TimeInterval(interval))
                 if now > customer.date! {
                     customer.status = "Completed"
                 } else {

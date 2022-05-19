@@ -61,10 +61,13 @@ class CustomerInf: UIViewController {
     
     @IBAction func saveButton(_ sender: Any) {
         let bookingDate = dataPicker.date
-        let now = Date()
+        let today = Date()
+        let zone = NSTimeZone.system
+        let interval = zone.secondsFromGMT()
+        let now = today.addingTimeInterval(TimeInterval(interval))
         let id = appDelegate.listCustomers().count + 1
-        if nameTx.text!.count > 0 && phoneTx.text!.count > 0 && peopleNum.text!.count > 0 && bookingTextfield.text!.count > 0 {
-            if now < bookingDate {
+        if now < bookingDate {
+            if nameTx.text!.count > 0 && phoneTx.text!.count > 0 && peopleNum.text!.count > 0 && bookingTextfield.text!.count > 0 {
                 appDelegate.storeCustomer(id: id, nameC: nameTx.text!, nameR: nameRestaurant, phone: phoneTx.text!, num: Int(peopleNum.text!)!, status: "on-going", date: bookingDate)
                 let vc = UIAlertController(title: "Success！", message: "you have completed the reservation", preferredStyle: .alert)
                 vc.addAction(UIAlertAction(title: "OK", style: .cancel) {
@@ -75,13 +78,13 @@ class CustomerInf: UIViewController {
                 })
                 self.present(vc, animated: true)
             } else {
-                let vc = UIAlertController(title: "Warning！", message: "You cannot book a time that has passed", preferredStyle: .alert)
+                let vc = UIAlertController(title: "Warning!", message: "You should fill all booking information", preferredStyle: .alert)
                 vc.addAction(UIAlertAction(title: "OK", style: .cancel))
                 self.present(vc, animated: true)
             }
 
         } else {
-            let vc = UIAlertController(title: "Warning!", message: "You should fill all booking information", preferredStyle: .alert)
+            let vc = UIAlertController(title: "Warning！", message: "You cannot book a time that has passed", preferredStyle: .alert)
             vc.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(vc, animated: true)
         }
