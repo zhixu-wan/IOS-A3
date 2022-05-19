@@ -14,13 +14,15 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var restaurantName: UILabel!
     @IBOutlet weak var ScrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
+   
+    @IBOutlet weak var qqqqq: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         restaurantName.text = "Pizza Hut"
         nextButton()
         pictureGallery()
+        gallery()
         
     }
     func pictureGallery(){
@@ -41,10 +43,28 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
         self.ScrollView.contentSize = CGSize(width: contentW, height: 0)
             self.ScrollView.isPagingEnabled = true
             self.ScrollView.delegate = self
-            self.pageControl.numberOfPages = totalCount
-           
+       
         }
-    
+    func gallery(){
+            let imageW:CGFloat = self.qqqqq.frame.size.width
+            let imageH:CGFloat = self.qqqqq.frame.size.height
+            let imageY:CGFloat = 0
+            let totalCount:NSInteger = 5
+            for index in 0..<totalCount{
+                let imageView:UIImageView = UIImageView();
+                let imageX:CGFloat = CGFloat(index) * imageW;
+                imageView.frame = CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
+                let name:String = String(format: "hut%d", index+1);
+                imageView.image = UIImage(named: name);
+                self.qqqqq.showsHorizontalScrollIndicator = false
+                self.qqqqq.addSubview(imageView)
+            }
+            let contentW:CGFloat = imageW * CGFloat(totalCount)
+        self.qqqqq.contentSize = CGSize(width: contentW, height: 0)
+            self.qqqqq.isPagingEnabled = true
+            self.qqqqq.delegate = self
+       
+        }
   
     
     func nextButton() {
