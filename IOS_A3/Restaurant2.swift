@@ -9,15 +9,40 @@ import Foundation
 
 import UIKit
 
-class Restaurant2: UIViewController {
+class Restaurant2: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var restaurantName: UILabel!
+    @IBOutlet weak var eeeee: UIScrollView!
+    @IBOutlet weak var uuuuu: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         nextButton()
+        pictureGallery()
     }
+    func pictureGallery(){
+            let imageW:CGFloat = self.eeeee.frame.size.width
+            let imageH:CGFloat = self.eeeee.frame.size.height
+            let imageY:CGFloat = 0
+            let totalCount:NSInteger = 5
+            for index in 0..<totalCount{
+                let imageView:UIImageView = UIImageView();
+                let imageX:CGFloat = CGFloat(index) * imageW;
+                imageView.frame = CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
+                let name:String = String(format: "best%d", index+1);
+                imageView.image = UIImage(named: name);
+                self.eeeee.showsHorizontalScrollIndicator = false
+                self.eeeee.addSubview(imageView)
+            }
+            let contentW:CGFloat = imageW * CGFloat(totalCount)
+        self.eeeee.contentSize = CGSize(width: contentW, height: 0)
+            self.eeeee.isPagingEnabled = true
+            self.eeeee.delegate = self
+            self.uuuuu.numberOfPages = totalCount
+           
+        }
+    
     
     func nextButton() {
         let next = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))

@@ -20,10 +20,10 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         restaurantName.text = "Pizza Hut"
         nextButton()
+        pictureGallery()
         
     }
-    func pictureGallery(){   //实现图片滚动播放；
-            //image width
+    func pictureGallery(){
             let imageW:CGFloat = self.ScrollView.frame.size.width
             let imageH:CGFloat = self.ScrollView.frame.size.height
             let imageY:CGFloat = 0
@@ -42,30 +42,10 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
             self.ScrollView.isPagingEnabled = true
             self.ScrollView.delegate = self
             self.pageControl.numberOfPages = totalCount
-            self.addTimer()
+           
         }
     
-    func nextImage(sender:AnyObject!){
-            var page:Int = self.pageControl.currentPage;
-            if(page == 4){
-                page = 0;
-            }else{
-                page += 1
-            }
-            let x:CGFloat = CGFloat(page) * self.ScrollView.frame.size.width;
-        self.ScrollView.contentOffset = CGPoint(x: x, y: 0)
-        }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-                let scrollviewW:CGFloat = ScrollView.frame.size.width
-                let x:CGFloat = ScrollView.contentOffset.x
-                let page:Int = (Int)((x + scrollviewW / 2) / scrollviewW)
-                self.pageControl.currentPage = page;
-        }
-    
-    func addTimer(){
-        self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: Selector(("nextImage:")), userInfo: nil, repeats: true)
-    }
+  
     
     func nextButton() {
         let next = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))

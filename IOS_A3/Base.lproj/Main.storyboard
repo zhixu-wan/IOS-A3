@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6LP-uY-g9C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6LP-uY-g9C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -200,7 +200,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myBookingCell" id="Xkm-aq-LH2" customClass="MyBookingCell" customModule="IOS_A3" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xkm-aq-LH2" id="JaT-X9-ZT0">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -343,9 +343,19 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ob-ex-eOk">
+                                <rect key="frame" x="37" y="235" width="339" height="221"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Jwl-sy-wfz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="OJo-Xz-D8m"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="G5d-zz-dF0">
+                                <rect key="frame" x="146" y="511" width="123" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J2J-n6-gHc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.081227983254200012" green="0.21359796100821801" blue="0.41815090673575128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fxa-A0-DiK" firstAttribute="top" secondItem="J2J-n6-gHc" secondAttribute="top" constant="55" id="GY9-Fs-eAb"/>
                             <constraint firstItem="fxa-A0-DiK" firstAttribute="leading" secondItem="J2J-n6-gHc" secondAttribute="leading" constant="107" id="JLB-nb-tQ4"/>
@@ -354,13 +364,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="EVj-S0-mho"/>
                     <connections>
+                        <outlet property="eeeee" destination="1ob-ex-eOk" id="Iuw-Zw-EVG"/>
                         <outlet property="restaurantName" destination="fxa-A0-DiK" id="ZaI-uK-snO"/>
+                        <outlet property="uuuuu" destination="G5d-zz-dF0" id="cHg-K8-wpC"/>
                         <segue destination="Q9l-Pz-Z8x" kind="show" identifier="fromR2Segue" id="Tus-YK-wI8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zik-Av-mhX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780" y="832"/>
+            <point key="canvasLocation" x="2779.7101449275365" y="831.69642857142856"/>
         </scene>
         <!--Restaurant1-->
         <scene sceneID="OyG-SH-xmV">
@@ -378,13 +390,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrS-C8-ryE">
-                                <rect key="frame" x="36" y="258" width="342" height="194"/>
+                                <rect key="frame" x="36" y="234" width="342" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="XgP-SR-sXe"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="IrU-mA-Sbr"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lrQ-iO-d93">
-                                <rect key="frame" x="146" y="478" width="123" height="28"/>
+                                <rect key="frame" x="146" y="520" width="123" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
                         </subviews>
@@ -584,7 +596,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9XK-qa-eHB"/>
+        <segue reference="Tus-YK-wI8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
@@ -595,6 +607,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
