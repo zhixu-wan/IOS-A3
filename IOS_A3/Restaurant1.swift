@@ -20,60 +20,47 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
         // Do any additional setup after loading the view.
         restaurantName.text = "Pizza Hut"
       
-        func pictureGallery(){
-                //image width
-                let imageW:CGFloat = self.ScrollView.frame.size.width
-                let imageH:CGFloat = self.ScrollView.frame.size.height
-                let imageY:CGFloat = 0
-                let totalCount:NSInteger = 5
-                for index in 0..<totalCount{
-                    let imageView:UIImageView = UIImageView();
-                    let imageX:CGFloat = CGFloat(index) * imageW;
-                    imageView.frame = CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
-                    let name:String = String(format: "pizza%d", index+1);
-                    imageView.image = UIImage(named: name);
-                    self.ScrollView.showsHorizontalScrollIndicator = false
-                    self.ScrollView.addSubview(imageView)
-                }
-                let contentW:CGFloat = imageW * CGFloat(totalCount)
-            self.ScrollView.contentSize = CGSize(width: contentW, height: 0)
-                self.ScrollView.isPagingEnabled = true
-                self.ScrollView.delegate = self
-                self.pageControl.numberOfPages = totalCount
-                self.addTimer()
-            }
+        pictureGallery()
+        nextButton()
         
-        func nextImage(sender:AnyObject!){
-                var page:Int = self.pageControl.currentPage;
-                if(page == 4){
-                    page = 0;
-                }else{
-                    page += 1
-                }
-                let x:CGFloat = CGFloat(page) * self.ScrollView.frame.size.width;
-            self.ScrollView.contentOffset = CGPoint(x: x, y: 0)
-            }
         
-        func scrollViewDidScroll(_ scrollView: UIScrollView) {
-                    let scrollviewW:CGFloat = ScrollView.frame.size.width
-                    let x:CGFloat = ScrollView.contentOffset.x
-                    let page:Int = (Int)((x + scrollviewW / 2) / scrollviewW)
-                    self.pageControl.currentPage = page;
-            }
+            
         
-        func addTimer(){
-            self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: Selector(("nextImage:")), userInfo: nil, repeats: true)
+        
+    }
+        
+       
+       func pictureGallery(){
+       
+        let imageW:CGFloat = self.ScrollView.frame.size.width
+        let imageH:CGFloat = self.ScrollView.frame.size.height
+        let imageY:CGFloat = 0
+        let totalCount:NSInteger = 5
+        for index in 0..<totalCount{
+            let imageView:UIImageView = UIImageView();
+            let imageX:CGFloat = CGFloat(index) * imageW;
+            imageView.frame = CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
+            let name:String = String(format: "pizza%d", index+1);
+            imageView.image = UIImage(named: name);
+            self.ScrollView.showsHorizontalScrollIndicator = false
+            self.ScrollView.addSubview(imageView)
         }
+        let contentW:CGFloat = imageW * CGFloat(totalCount)
+    self.ScrollView.contentSize = CGSize(width: contentW, height: 0)
+        self.ScrollView.isPagingEnabled = true
+        self.ScrollView.delegate = self
+        self.pageControl.numberOfPages = totalCount
         
-        func nextButton() {
-            let next = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))
-            next.layer.cornerRadius = 50
-            next.clipsToBounds = true
-            next.setImage(UIImage(named: "go"), for: .normal)
-            view.addSubview(next)
-            next.addTarget(self, action: #selector(bookClick), for: .touchUpInside)
-        }
-        
+       }
+   
+    
+    func nextButton() {
+        let next = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))
+        next.layer.cornerRadius = 50
+        next.clipsToBounds = true
+        next.setImage(UIImage(named: "go"), for: .normal)
+        view.addSubview(next)
+        next.addTarget(self, action: #selector(bookClick), for: .touchUpInside)
     }
     
     
@@ -86,4 +73,5 @@ class Restaurant1: UIViewController, UIScrollViewDelegate {
         controller.nameRestaurant = restaurantName.text!
     }
 }
+
 

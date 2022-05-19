@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6LP-uY-g9C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6LP-uY-g9C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -200,7 +200,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myBookingCell" id="Xkm-aq-LH2" customClass="MyBookingCell" customModule="IOS_A3" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xkm-aq-LH2" id="JaT-X9-ZT0">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -343,6 +343,12 @@
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-Ra-x9p">
+                                <rect key="frame" x="20" y="249" width="374" height="198"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZUz-00-h1E"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="sBe-hB-vAx"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J2J-n6-gHc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -360,47 +366,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zik-Av-mhX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780" y="832"/>
+            <point key="canvasLocation" x="2779.7101449275365" y="831.69642857142856"/>
         </scene>
         <!--Restaurant1-->
         <scene sceneID="OyG-SH-xmV">
             <objects>
                 <viewController title="Restaurant1" id="1S3-Fr-dBG" customClass="Restaurant1" customModule="IOS_A3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C1a-kp-4ma">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="umn-G1-Hqn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Hut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCO-X9-yp7">
-                                <rect key="frame" x="107" y="143" width="200" height="43"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="36"/>
-                                <color key="textColor" systemColor="systemBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrS-C8-ryE">
-                                <rect key="frame" x="36" y="258" width="342" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="XgP-SR-sXe"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="IrU-mA-Sbr"/>
-                            </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lrQ-iO-d93">
-                                <rect key="frame" x="146" y="478" width="123" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="JZ8-Vp-HNC"/>
-                        <color key="backgroundColor" red="0.40149368523316065" green="0.35460231141181764" blue="0.38353072627376161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="JZ8-Vp-HNC" firstAttribute="trailing" secondItem="WCO-X9-yp7" secondAttribute="trailing" constant="107" id="R0A-E1-e3y"/>
-                            <constraint firstItem="WCO-X9-yp7" firstAttribute="top" secondItem="JZ8-Vp-HNC" secondAttribute="top" constant="55" id="eeh-p0-0hg"/>
-                            <constraint firstItem="WCO-X9-yp7" firstAttribute="leading" secondItem="JZ8-Vp-HNC" secondAttribute="leading" constant="107" id="okJ-Iq-jMp"/>
-                        </constraints>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="A4n-sg-5Tf"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="Vvo-Gl-g0o"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="MK5-is-vBB"/>
+                    </scrollView>
                     <navigationItem key="navigationItem" id="7oi-LU-Ws1"/>
                     <connections>
-                        <outlet property="ScrollView" destination="lrS-C8-ryE" id="KOP-nz-9ug"/>
-                        <outlet property="pageControl" destination="lrQ-iO-d93" id="T96-6P-VhQ"/>
-                        <outlet property="restaurantName" destination="WCO-X9-yp7" id="2Xc-wh-Rx9"/>
                         <segue destination="Q9l-Pz-Z8x" kind="show" identifier="fromR1Segue" id="9XK-qa-eHB"/>
                     </connections>
                 </viewController>
@@ -584,7 +564,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9XK-qa-eHB"/>
+        <segue reference="Tus-YK-wI8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
@@ -595,6 +575,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
