@@ -53,7 +53,7 @@ class Restaurant2: UIViewController, UIScrollViewDelegate {
                 let imageView:UIImageView = UIImageView();
                 let imageX:CGFloat = CGFloat(index) * imageW;
                 imageView.frame = CGRect(x: imageX, y: imageY, width: imageW, height: imageH)
-                let name:String = String(format: "best%d", index+1);
+                let name:String = String(format: "the%d", index+1);
                 imageView.image = UIImage(named: name);
                 self.uuuuu.showsHorizontalScrollIndicator = false
                 self.uuuuu.addSubview(imageView)
