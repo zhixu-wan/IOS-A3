@@ -386,6 +386,7 @@
                         <outlet property="ScrollView" destination="lrS-C8-ryE" id="KOP-nz-9ug"/>
                         <outlet property="pageControl" destination="lrQ-iO-d93" id="T96-6P-VhQ"/>
                         <outlet property="restaurantName" destination="WCO-X9-yp7" id="2Xc-wh-Rx9"/>
+                        <segue destination="Q9l-Pz-Z8x" kind="show" identifier="fromR1Segue" id="9XK-qa-eHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJS-dY-NDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -567,6 +568,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tus-YK-wI8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

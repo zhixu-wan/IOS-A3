@@ -61,18 +61,29 @@ class CustomerInf: UIViewController {
     
     @IBAction func saveButton(_ sender: Any) {
         let bookingDate = dataPicker.date
-        if nameTx.text!.count > 0 && phoneTx.text!.count > 0 && peopleNum.text!.count > 0 && bookingTextfield.text!.count > 0 {
-            appDelegate.storeCustomer(id: 1, nameC: nameTx.text!, nameR: nameRestaurant, phone: phoneTx.text!, num: Int(peopleNum.text!)!, status: "on-going", date: bookingDate)
-            let vc = UIAlertController(title: "Success！", message: "you have completed the reservation", preferredStyle: .alert)
-            vc.addAction(UIAlertAction(title: "OK", style: .cancel) {
-                _ in
-                let vc = self.storyboard?.instantiateViewController(identifier: "HomePage") as! ViewController
-                self.navigationController?.pushViewController(vc, animated: true)
-                vc.navigationItem.setHidesBackButton(true, animated: true)
-            })
-            self.present(vc, animated: true)
+        let today = Date()
+        let zone = NSTimeZone.system
+        let interval = zone.secondsFromGMT()
+        let now = today.addingTimeInterval(TimeInterval(interval))
+        if now < bookingDate {
+            if nameTx.text!.count > 0 && phoneTx.text!.count > 0 && peopleNum.text!.count > 0 && bookingTextfield.text!.count > 0 {
+                appDelegate.storeCustomer(id: 1, nameC: nameTx.text!, nameR: nameRestaurant, phone: phoneTx.text!, num: Int(peopleNum.text!)!, status: "on-going", date: bookingDate)
+                let vc = UIAlertController(title: "Success！", message: "you have completed the reservation", preferredStyle: .alert)
+                vc.addAction(UIAlertAction(title: "OK", style: .cancel) {
+                    _ in
+                    let vc = self.storyboard?.instantiateViewController(identifier: "HomePage") as! ViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    vc.navigationItem.setHidesBackButton(true, animated: true)
+                })
+                self.present(vc, animated: true)
+            } else {
+                let vc = UIAlertController(title: "Warning!", message: "You should fill all booking information", preferredStyle: .alert)
+                vc.addAction(UIAlertAction(title: "OK", style: .cancel))
+                self.present(vc, animated: true)
+            }
+
         } else {
-            let vc = UIAlertController(title: "Warning!", message: "You should fill all booking information", preferredStyle: .alert)
+            let vc = UIAlertController(title: "Warning！", message: "You cannot book a time that has passed", preferredStyle: .alert)
             vc.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(vc, animated: true)
         }
