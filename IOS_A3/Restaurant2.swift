@@ -68,7 +68,7 @@ class Restaurant2: UIViewController, UIScrollViewDelegate {
     
     
     func nextButton() {
-        let next = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-200, width: 100, height: 100))
+        let next = UIButton(frame: CGRect(x: view.layer.frame.midX-50, y: view.layer.frame.maxY-180, width: 100, height: 100))
         next.layer.cornerRadius = 50
         next.clipsToBounds = true
         next.setImage(UIImage(named: "go"), for: .normal)

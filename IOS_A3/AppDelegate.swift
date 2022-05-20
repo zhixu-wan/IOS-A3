@@ -170,7 +170,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             for trans in searchResult as [NSManagedObject] {
                 if let customer = trans as? Customer {
                     if id == customer.id {
-                        customer.status = "Cancelled"
+                        customer.status = "Canceled"
                     }
                 }
             }
