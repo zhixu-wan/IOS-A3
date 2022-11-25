@@ -153,7 +153,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if now > customer.date! {
                     customer.status = "Completed"
                 } else {
-                    customer.status = customer.status
+                    //customer.status = customer.status
                 }
             }
         } catch {
